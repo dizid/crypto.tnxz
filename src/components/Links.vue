@@ -34,9 +34,18 @@ Resources for: {{icon}}
       <tr>
        <td class="border px-4 py-2">
             <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-           <a :href="'https://bitcoinist.com/?s=eth' + icon.toLowerCase()" target="_blank">Bitcoinist</a></button></td> 
+           <a :href="'https://bitcoinist.com/?s=' + icon.toLowerCase()" target="_blank">Bitcoinist</a></button></td> 
       <td class="border px-4 py-2">Extended news, Tech, Industry, HowTo</td>
       </tr>
+
+ <tr>
+       <td class="border px-4 py-2">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+           <a :href="'https://www.forbes.com/search/?q=' + icon.toLowerCase()" target="_blank">Forbes</a></button></td> 
+      <td class="border px-4 py-2">Extended news</td>
+      </tr>
+
+
   </tbody>
 </table></div>
 </template>
