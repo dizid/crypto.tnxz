@@ -1,0 +1,61 @@
+
+binance: Set Spot or Margin
+Trade effortlessly with spot or increase profits with isolated and cross margin leveraging.
+
+tokensoft
+bitgo
+anchorage
+hex trust
+
+
+## TODO
+Per coin: 10 most important URLS
+Add pages: crypto tweets
+Add component: crypto sentiment per coin ?!
+Add crypto search engine ?!
+404 Page vormgeven
+Design: beter!
+Footer met mijn naam etc
+Add blog!
+
+
+## DONE
+ok install tailwind
+ok get tailwind working
+ok show icons
+ok deleted bulma bs
+ok router passes (coin-) icon as a prop to coin.vue and coinsubnav.vue
+ok added submenu on coin page
+ok added reddit posts
+ok Router: history mode
+ok Invoegen: de icons voor de currencies
+ok changed title
+solved router variable (icon) must be passed to the submenu component inside the coin.vue component.
+
+PROBLEM
+
+https://www.cryptocompare.com/coins/btc/overview/eur
+
+## DATA
+Icons: http://cryptoicons.co/
+Cryptocompare API key: 4ce27acf37871064f1b0493cf5cd88f438e24e5915775fb95e5329ea2ad927dd
+DOCS: https://min-api.cryptocompare.com/documentation?key=TradingSignals&cat=tradingSignalsIntoTheBlockLatest&api_key=4ce27acf37871064f1b0493cf5cd88f438e24e5915775fb95e5329ea2ad927dd
+
+https://medium.com/@rachidsakara/building-a-cryptocurrency-app-with-vue-js-and-cryptocompare-api-14231af6f099
+https://medium.com/js-dojo/build-a-cryptocurrency-tracker-using-vue-js-f9b3642823f8
+
+https://www.netlify.com/blog/2019/11/30/how-to-deploy-a-vue-site/
+
+
+VIDEO channels
+https://www.youtube.com/channel/UCRqBu-grVX1p97WaX4d-OuQ
+
+RESEARCH
+https://www.coindesk.com/webinars
+https://cointelegraph.com/category/market-analysis
+
+NEWS
+https://cointelegraph.com/tags/ethereum
+https://www.todayonchain.com/
+
+

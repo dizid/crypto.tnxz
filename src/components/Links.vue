@@ -1,0 +1,57 @@
+<template>
+    <div class="border border-orange-400">
+Resources for: {{icon}}
+</div>
+<div class="flex flex-row bg-gray-800 text-orange-500">
+<table class="table-auto text-xl">
+  <thead>
+    <tr>
+      <th class="px-4 py-2">Resource</th>
+      <th class="px-4 py-2">Description</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="border px-4 py-2">
+           <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          <a :href="'https://www.cryptocompare.com/coins/' + icon.toLowerCase() + '/overview/eur'" target="_blank">Cryptocompare</a></button></td>
+      <td class="border px-4 py-2">Prices, charts, research, news, API</td>
+     </tr>
+     <tr>
+     <td class="border px-4 py-2">
+           <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          <a :href="'https://cointelegraph.com/search?query=' + icon.toLowerCase()" target="_blank">Cointelegraph</a></button></td>
+      <td class="border px-4 py-2">News, magazine, research, markets</td>
+    </tr>
+    <tr>
+       <td class="border px-4 py-2">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+           <a :href="'https://cryptoslate.com/?s=' + icon.toLowerCase()" target="_blank">Cryptoslate</a></button></td> 
+      <td class="border px-4 py-2">People, Companies, Trending, Prices</td>
+  
+    </tr>
+      <tr>
+       <td class="border px-4 py-2">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+           <a :href="'https://bitcoinist.com/?s=eth' + icon.toLowerCase()" target="_blank">Bitcoinist</a></button></td> 
+      <td class="border px-4 py-2">Extended news, Tech, Industry, HowTo</td>
+      </tr>
+  </tbody>
+</table></div>
+</template>
+
+<script>
+export default {
+    props: {
+    icon: {
+      type: String,
+      required: true
+    }
+  }
+}
+</script>
+
+<style>
+
+</style>

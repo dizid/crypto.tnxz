@@ -1,25 +1,29 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/Home.vue'
+import { createRouter, createWebHistory } from "vue-router";
+import Home from '@/views/Home'
+import News from '@/views/News'
+import Coin from '@/views/Coin'
+import Links from '@/components/Links'
+import Reddit from '@/components/Reddit'
+import Twitter from '@/components/Twitter'
+import Youtube from '@/components/Youtube'
+import NotFoundComponent from '@/components/NotFoundComponent'
 
-const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
-]
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
-})
+  routes: [
+    {path: '/',name: 'Home',component: Home},
+    { path: '/news', name: 'News', component: News},
+    {path: "/coin/:icon",name: "coin",component: Coin,
+    props: true,
+    children: [
+      {path: 'links', name: 'links', props: true, component: Links},
+      {path: 'reddit', name: 'reddit', props: true, component: Reddit},
+    {path: 'twitter', name: 'twitter', props: true, component: Twitter},
+    {path: 'youtube', name: 'youtube',props: true, component: Youtube}
+  ]},
+    { path: "/:catchAll(.*)", component: NotFoundComponent }
+  ]
+});
 
-export default router
+export default router;
