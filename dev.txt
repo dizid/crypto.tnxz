@@ -59,3 +59,8 @@ https://cointelegraph.com/tags/ethereum
 https://www.todayonchain.com/
 
 
+LEARN
+https://www.investopedia.com/articles/active-trading/042114/overbought-or-oversold-use-relative-strength-index-find-out.asp
+
+GIT
+git remote add origin remote repository https://github.com/dizid/crypto.tnxz.git
