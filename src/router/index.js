@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from '@/views/Home'
 import News from '@/views/News'
+import About from '@/views/About'
 import Coin from '@/views/Coin'
 import Links from '@/components/Links'
 import Reddit from '@/components/Reddit'
@@ -14,6 +15,7 @@ const router = createRouter({
   routes: [
     {path: '/',name: 'Home',component: Home},
     { path: '/news', name: 'News', component: News},
+    { path: '/about', name: 'About', component: About},
     {path: "/coin/:icon",name: "coin",component: Coin,
     props: true,
     children: [

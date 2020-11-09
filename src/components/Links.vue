@@ -1,8 +1,8 @@
 <template>
-    <div class="border border-orange-400">
+   <div class="container mx-auto bg-gray-700 p-3 text-orange-500 md:font-bold">
 Resources for: {{icon}}
 </div>
-<div class="flex flex-row bg-gray-800 text-orange-500">
+ <div class="container mx-auto bg-gray-800 p-3 text-orange-500">
 <table class="table-auto text-xl">
   <thead>
     <tr>

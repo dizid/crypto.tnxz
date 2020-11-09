@@ -1,25 +1,37 @@
 
-binance: Set Spot or Margin
-Trade effortlessly with spot or increase profits with isolated and cross margin leveraging.
-
-tokensoft
-bitgo
-anchorage
-hex trust
-
 
 ## TODO
+ok % change: text vet rood als negatief, en groen als positief
+coin.vue: show links on first render
+reddit: per coin icon! (nu alleen bitcoin)
+Design: menuutjes!
+Design: kleiner lettertype op mobile
+Design: leuk font!
 Per coin: 10 most important URLS
 Add pages: crypto tweets
+Add component: more financials
+Add content: basics: explanation, history, 
+Add content: main exchanges
+Add content: wallets
+Add content: ledgers, offline
+Add content: main developments
+Add content: technisch / programmers
+Add content: API's
 Add component: crypto sentiment per coin ?!
 Add crypto search engine ?!
 404 Page vormgeven
-Design: beter!
+Add Analytics
+30% Design: beter!
 Footer met mijn naam etc
 Add blog!
+SEO / SEM
+Iets met Discord?!
+Telegram integration?
+Whatsapp..?
 
 
 ## DONE
+ok purge CSS configured
 ok install tailwind
 ok get tailwind working
 ok show icons

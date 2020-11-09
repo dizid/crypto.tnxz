@@ -1,17 +1,14 @@
 <template>
-<div class="container">
-<section class="section">
 <coinsubnav :icon=icon />  
-</section>
-<section class="section">
+
+<div>
 <router-view name="submenu"/>
-</section>
 </div>
 </template>
 
 <script>
 import reddit from '../components/Reddit'
-import coinsubnav from '../components/CoinSubNav'
+import coinsubnav from '../components/CoinSubNav' // TODO these 2 imports needed? or import also tweets, links, video, ?
 export default {
 components: {reddit, coinsubnav},
 
