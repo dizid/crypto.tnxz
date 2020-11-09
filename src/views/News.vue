@@ -1,6 +1,5 @@
 <template>
-    <section class="section">
-           <div class="box" v-for="item in news">
+    <div class="container mx-auto bg-gray-800 p-4 text-orange-400" v-for="item in news">
                <div class="card">
                     <div class="card-image">
                     </div>
@@ -53,7 +52,7 @@
                     </div>
                 </div>
              </div>
-      </section>
+     
 </template>
 
 <script>

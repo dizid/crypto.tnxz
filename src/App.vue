@@ -1,5 +1,5 @@
 <template>
- <div class="container mx-auto bg-gray-500 p-4 text-yellow-400">
+ <div class="container mx-auto bg-gray-700 p-4 text-yellow-400">
     <nav class="flex justify-between">
         <div>
              <router-link to="/" class="text-lg text-grey-darkest hover:text-blue-dark ml-2 no-underline hover:underline">Home</router-link>

@@ -1,6 +1,8 @@
 <template>
       <div class="container mx-auto bg-gray-700 p-3 text-orange-500 md:font-bold">
-Reddit posts for: Bitcoin.
+        <div class="flex flex-row">
+    <div class="px-5"><img src="@/assets/reddit.png" width="30" height="30"></div><div> Reddit posts for: Bitcoin.</div>
+        </div>
 </div>
 
 <div v-for="comment in comments" :key="comment.data.id" class="container mx-auto bg-gray-800 p-1 text-orange-500">
