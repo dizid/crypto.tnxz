@@ -1,13 +1,11 @@
 
 
 ## TODO
-reddit: per coin icon! (nu alleen bitcoin)
+
 50% Design: menuutjes!
 40% Design: beter!
 Design: kleiner lettertype op mobile
 Design: leuk font!
-60% Per coin: 10 most important URLS
-
 Add Analytics
 Add pages: crypto tweets
 Add component: more financials
@@ -31,6 +29,8 @@ Whatsapp..?
 
 
 ## DONE
+ok Per coin: 10 most important URLS
+ok reddit: per coin icon! (nu alleen bitcoin)
 ok Netlify: _redirect file in /public to prevent 404s
 ok % change: text vet rood als negatief, en groen als positief
 ok coin.vue: show links on first render

@@ -78,6 +78,7 @@ Resources for: {{icon}}
 
 <script>
 export default {
+  name: 'resouces',
     props: {
     icon: {
       type: String,
