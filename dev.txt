@@ -1,11 +1,10 @@
-
-
 ## TODO
 
-50% Design: menuutjes!
-40% Design: beter!
+70% Design: menuutjes!
+50% Design: beter!
 Design: kleiner lettertype op mobile
 Design: leuk font!
+
 Add Analytics
 Add pages: crypto tweets
 Add component: more financials
@@ -52,7 +51,12 @@ PROBLEM
 https://www.cryptocompare.com/coins/btc/overview/eur
 
 ## DATA
-Icons: http://cryptoicons.co/
+API docs can be found here: https://api.nomics.com/
+Nomics API key: 16186f60d9df82897d708d0b4a6b3d0b
+
+PSE ID: 9a0cb90330a0c39cf
+Google Analytics webstream ID: G-RTJJ00PLT9 ( Did normal setup, not using vue-analytics, for now)
+
 Cryptocompare API key: 4ce27acf37871064f1b0493cf5cd88f438e24e5915775fb95e5329ea2ad927dd
 DOCS: https://min-api.cryptocompare.com/documentation?key=TradingSignals&cat=tradingSignalsIntoTheBlockLatest&api_key=4ce27acf37871064f1b0493cf5cd88f438e24e5915775fb95e5329ea2ad927dd
 
@@ -79,3 +83,8 @@ https://www.investopedia.com/articles/active-trading/042114/overbought-or-overso
 
 GIT
 git remote add origin remote repository https://github.com/dizid/crypto.tnxz.git
+
+Google Search 
+Past 45 seconds: http://www.google.com/#&q=kanye+west&tbs=qdr:s45&tbo=1
+Past 5 minutes http://www.google.com/#&q=kanye+west&tbs=qdr:n5&tbo=1
+Past 2 hours http://www.google.com/#&q=kanye+west&tbs=qdr:h2&tbo=1

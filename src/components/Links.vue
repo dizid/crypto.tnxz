@@ -8,10 +8,15 @@ Resources for: {{icon}}
     <tr>
       <th class="px-4 py-2">Resource</th>
       <th class="px-4 py-2">Description</th>
-      
-    </tr>
+      </tr>
   </thead>
   <tbody>
+        <tr>
+      <td class="border px-4 py-2">
+           <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          <a :href="'https://nomics.com/assets/' + icon.toLowerCase()" target="_blank">Nomics</a></button></td>
+      <td class="border px-4 py-2">Top data! Charts, volumes, exchanges, API</td>
+     </tr>
     <tr>
       <td class="border px-4 py-2">
            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
