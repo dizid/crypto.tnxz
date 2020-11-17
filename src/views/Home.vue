@@ -14,14 +14,13 @@
 			</tr>
 		</thead>
 		<tbody>
-					<tr v-for="(value, cryptoicon) in coins" v-bind:key="value">
+		<tr v-for="(value, cryptoicon) in coindata" v-bind:key="value"><!-- value = the whole result array. coindata OOK (!?) Begrijp dit niet.-->
 				 <td class="border px-4 py-2">
-					 <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+					 <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 rounded">
 					 <router-link :to="'/coin/'+ cryptoicon + '/links'" class="button">{{cryptoicon}}</router-link></button></td>
 			  <td class="border px-4 py-2">{{value.EUR.PRICE}}</td>
 			  <td class="border px-4 py-2">{{value.USD.PRICE}}</td>
-
-			 <td class="border px-4 py-2 text-green-400">
+ 			 <td class="border px-4 py-2 text-green-400">
 				 <span v-if="value.EUR.CHANGEPCT24HOUR < 0" class="text-red-500" > {{value.EUR.CHANGEPCT24HOUR}}</span>
 				  <span v-else class="text-green-500" > {{value.EUR.CHANGEPCT24HOUR}}</span>
 				</td>
@@ -40,15 +39,14 @@ import axios from 'axios'
 export default {
   name: 'home',
   data: () => ({
-    coins: [],
+    coindata: [],
     errors: []
   }),
 
   created () {
-      axios.get('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC,ETH,DOT,CRO,EUR&tsyms=USD,EUR')
+      axios.get('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC,ETH,DOT,ENJ,CRO&tsyms=USD,EUR')
       .then(response => {
-      	this.coins = response.data.DISPLAY
-        console.log(response)
+      	this.coindata = response.data.DISPLAY
       })
       .catch(e => {
         this.errors.push(e)

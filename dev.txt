@@ -1,5 +1,14 @@
 ## TODO
+invoegen achter tableheader 'coin' <span v-if="(myCoins.length > 1)">s</span>
+initialiseren!?
+validatie: does RWE coin excist??
+validatie: 3 letters!
+trim input
+delete coin
 
+
+
+Improve search!!
 70% Design: menuutjes!
 50% Design: beter!
 Design: kleiner lettertype op mobile
@@ -28,6 +37,8 @@ Whatsapp..?
 
 
 ## DONE
+ok Alle values (objects) opslaan in een array of objects. [eth 3, btc, 4, dot, 1.3]  --> opslaan in localstorage
+ok array openen --> show in table. edit values:  edit array --> opslaan
 ok Per coin: 10 most important URLS
 ok reddit: per coin icon! (nu alleen bitcoin)
 ok Netlify: _redirect file in /public to prevent 404s
@@ -47,12 +58,21 @@ ok changed title
 solved router variable (icon) must be passed to the submenu component inside the coin.vue component.
 
 PROBLEM
+How to edit the value fields in the table?
+
+Solution??
+<input type="text" :v-model="listCollection[index].name" 
+https://forum.vuejs.org/t/how-to-change-input-value-in-vfor/38134
+
 
 https://www.cryptocompare.com/coins/btc/overview/eur
 
 ## DATA
 API docs can be found here: https://api.nomics.com/
 Nomics API key: 16186f60d9df82897d708d0b4a6b3d0b
+
+Cache nomics data: https://medium.com/tokensoft/write-your-own-crypto-price-feed-api-in-10-minutes-with-nomics-and-graphql-a4cb29e76fdf
+
 
 PSE ID: 9a0cb90330a0c39cf
 Google Analytics webstream ID: G-RTJJ00PLT9 ( Did normal setup, not using vue-analytics, for now)
@@ -64,6 +84,9 @@ https://medium.com/@rachidsakara/building-a-cryptocurrency-app-with-vue-js-and-c
 https://medium.com/js-dojo/build-a-cryptocurrency-tracker-using-vue-js-f9b3642823f8
 
 https://www.netlify.com/blog/2019/11/30/how-to-deploy-a-vue-site/
+
+Another Vue crypto programmer that uses localstorage: 
+https://stackoverflow.com/questions/48229210/vue-js-update-array-with-current-localstorage-at-refresh
 
 
 VIDEO channels
@@ -88,3 +111,105 @@ Google Search
 Past 45 seconds: http://www.google.com/#&q=kanye+west&tbs=qdr:s45&tbo=1
 Past 5 minutes http://www.google.com/#&q=kanye+west&tbs=qdr:n5&tbo=1
 Past 2 hours http://www.google.com/#&q=kanye+west&tbs=qdr:h2&tbo=1
+
+
+[
+    {
+        "id": "BTC",
+        "currency": "BTC",
+        "symbol": "BTC",
+        "name": "Bitcoin",
+        "logo_url": "https://s3.us-east-2.amazonaws.com/nomics-api/static/images/currencies/btc.svg",
+        "status": "active",
+        "price": "13262.05664122",
+        "price_date": "2020-11-11T00:00:00Z",
+        "price_timestamp": "2020-11-11T15:50:00Z",
+        "circulating_supply": "18538368",
+        "max_supply": "21000000",
+        "market_cap": "245856886452",
+        "num_exchanges": "368",
+        "num_pairs": "42931",
+        "num_pairs_unmapped": "4583",
+        "first_candle": "2011-08-18T00:00:00Z",
+        "first_trade": "2011-08-18T00:00:00Z",
+        "first_order_book": "2017-01-06T00:00:00Z",
+        "rank": "1",
+        "rank_delta": "0",
+        "high": "16379.60654671",
+        "high_timestamp": "2017-12-16T00:00:00Z",
+        "1d": {
+            "volume": "18544475330.77",
+            "price_change": "388.51140164",
+            "price_change_pct": "0.0302",
+            "volume_change": "-4636228778.00",
+            "volume_change_pct": "-0.2000",
+            "market_cap_change": "7202367335.74",
+            "market_cap_change_pct": "0.0302"
+        },
+        "7d": {
+            "volume": "170598094914.67",
+            "price_change": "982.90361954",
+            "price_change_pct": "0.0800",
+            "volume_change": "26920100601.51",
+            "volume_change_pct": "0.1874",
+            "market_cap_change": "18278748093.93",
+            "market_cap_change_pct": "0.0803"
+        },
+        "30d": {
+            "volume": "608078534061.01",
+            "price_change": "3564.17742770",
+            "price_change_pct": "0.3675",
+            "volume_change": "98371688478.94",
+            "volume_change_pct": "0.1930",
+            "market_cap_change": "66300837073.21",
+            "market_cap_change_pct": "0.3692"
+        },
+        "365d": {
+            "volume": "9692194003168.55",
+            "price_change": "5685.01661050",
+            "price_change_pct": "0.7503",
+            "volume_change": "5874485494401.26",
+            "volume_change_pct": "1.5387",
+            "market_cap_change": "109141132935.48",
+            "market_cap_change_pct": "0.7983"
+        },
+        "ytd": {
+            "volume": "8760742211477.60",
+            "price_change": "6373.49335860",
+            "price_change_pct": "0.9252",
+            "volume_change": "4298683576890.41",
+            "volume_change_pct": "0.9634",
+            "market_cap_change": "120942435310.03",
+            "market_cap_change_pct": "0.9682"
+        }
+    }
+]
+
+
+Localstorage: It’s not secure. Don’t store any private or personal information in localStorage.
+
+
+https://stackoverflow.com/questions/4689856/how-to-change-value-of-object-which-is-inside-an-array-using-javascript-or-jquer
+//Initailize array of objects.
+let myArray = [
+  {id: 0, name: "Jhon"},
+  {id: 1, name: "Sara"},
+  {id: 2, name: "Domnic"},
+  {id: 3, name: "Bravo"}
+],
+    
+//Find index of specific object using findIndex method.    
+objIndex = myArray.findIndex((obj => obj.id == 1));
+
+//Log object to Console.
+console.log("Before update: ", myArray[objIndex])
+
+//Update object's name property.
+myArray[objIndex].name = "Laila"
+
+//Log object to console again.
+console.log("After update: ", myArray[objIndex])
+
+String : coins.ETH.USD.PRICE.replace("ETH", myCoin.coin.toUpperCase()).substring(2) * myCoin.amount
+
+string
