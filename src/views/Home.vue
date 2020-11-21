@@ -42,7 +42,7 @@ export default {
 	loading: true
   }),
  created () {
-	  fetch('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC,DOT,ETH,ENJ,CRO,BNB&tsyms=USD,EUR')
+	  fetch('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC,DOT,ETH,ENJ,EOS,XRP,CRO,BNB&tsyms=USD,EUR')
         .then(response => response.json())
     	.then(data => (this.coinData = data.DISPLAY))
 		.catch(e => {this.errors.push(e)})

@@ -1,7 +1,7 @@
 <template>
-<!-- coindata {{coinData}}<br> WORK - mostly -->
-<!-- coinData.BTC.USD {{coinData.BTC.USD}}<br>   -->
-<!-- Method showMyCoins: {{showMyCoins()}} <br> -->
+<!-- coindata {{coinData}}<br> WORK - mostly
+coinData.BTC.USD {{coinData.BTC.USD}}<br>   -->
+ Method showMyCoins: {{showMyCoins()}} <br> 
 <!-- Method showCoinData: {{showCoinData()}} <br>  coinData is Undefined  -->
 </template>
 <script>
@@ -13,18 +13,21 @@ let coinData = ref(0)
  let  myCoins = ref(0)
    return { coinData, myCoins };
 },
-methods: {
-  showMyCoins ()  {
-       this.myCoins.forEach(obj => {
-          Object.entries(obj).forEach(([key, value]) => {
-              console.log(`${key} ${value}`);
-          })
-          console.log('---------------------')
-        })
-  }
- },
-created() {
-    fetch("https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH&tsyms=USD,EUR")
+methods: { // START METHODS
+  async showMyCoins ()  {  // START FUNCTION
+ // let  Amount = this.myCoins
+   let Price = this.coinData
+const priceArray = this.myCoins.map(element => element.coin);
+
+console.log(await(priceArray)); // 
+
+ 
+
+        } // END FUNCTION
+  }, // END methods
+ 
+async created() {
+   await  fetch("https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH&tsyms=USD,EUR")
       .then(response => response.json())
       .then(data => (this.coinData = data))
 console.log("coindata.BTC.USD: ", this.coinData.BTC.USD)
