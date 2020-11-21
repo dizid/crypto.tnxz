@@ -13,7 +13,6 @@
     }
   },
   "dependencies": {
-    "axios": "^0.21.0",
     "core-js": "^3.6.5",
     "nomics": "^0.5.7",
     "tailwindcss": "^1.9.6",

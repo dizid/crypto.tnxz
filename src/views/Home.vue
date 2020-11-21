@@ -5,7 +5,6 @@
     	<table class="table-auto text-xl"> 
 		<thead>
 			<tr>
-			  
 			  <th class="px-4 py-2">Name</th>
 			  <th class="px-4 py-2"><span>&#8364;</span> Price</th>
 			  <th class="px-4 py-2">$ Price</th>
@@ -14,7 +13,7 @@
 			</tr>
 		</thead>
 		<tbody>
-		<tr v-for="(value, cryptoicon) in coindata" v-bind:key="value"><!-- value = the whole result array. coindata OOK (!?) Begrijp dit niet.-->
+		<tr v-for="(value, cryptoicon) in coinData" v-bind:key="value"><!-- value = the whole result array. coindata OOK (!?) Begrijp dit niet.-->
 				 <td class="border px-4 py-2">
 					 <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 rounded">
 					 <router-link :to="'/coin/'+ cryptoicon + '/links'" class="button">{{cryptoicon}}</router-link></button></td>
@@ -35,22 +34,18 @@
   </div> </div></div>
 </template>
 <script>
-import axios from 'axios'
 export default {
   name: 'home',
   data: () => ({
-    coindata: [],
-    errors: []
+    coinData: [null],
+	errors: [null],
+	loading: true
   }),
-
-  created () {
-      axios.get('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC,ETH,DOT,ENJ,CRO&tsyms=USD,EUR')
-      .then(response => {
-      	this.coindata = response.data.DISPLAY
-      })
-      .catch(e => {
-        this.errors.push(e)
-      })
+ created () {
+	  fetch('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC,DOT,ETH,ENJ,CRO,BNB&tsyms=USD,EUR')
+        .then(response => response.json())
+    	.then(data => (this.coinData = data.DISPLAY))
+		.catch(e => {this.errors.push(e)})
   }
 }
 </script>
