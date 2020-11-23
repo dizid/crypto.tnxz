@@ -1,9 +1,10 @@
 <template>
-<coinsubnav :icon=icon />  
-
 <div>
-<router-view name="submenu"/>
+<coinsubnav :icon=icon />  
 </div>
+<!-- <div>
+<router-view name="submenu"/>
+</div> -->
 </template>
 
 <script>

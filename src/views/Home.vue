@@ -13,7 +13,7 @@
 			</tr>
 		</thead>
 		<tbody>
-		<tr v-for="(value, cryptoicon) in coinData" v-bind:key="value"><!-- value = the whole result array. coindata OOK (!?) Begrijp dit niet.-->
+		<tr v-for="(value, cryptoicon) in coinData" v-bind:key="value"><!-- value: whole result array -->
 				 <td class="border px-4 py-2">
 					 <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 rounded">
 					 <router-link :to="'/coin/'+ cryptoicon + '/links'" class="button">{{cryptoicon}}</router-link></button></td>
@@ -35,7 +35,7 @@
 </template>
 <script>
 export default {
-  name: 'home',
+  name: 'Home',
   data: () => ({
     coinData: [null],
 	errors: [null],

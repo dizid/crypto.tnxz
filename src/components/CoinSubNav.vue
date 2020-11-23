@@ -6,9 +6,9 @@
      <p id="hamburgerbtn" class="md:hidden bg-purple-800">menu</p>
         </div>
        <ul class="hidden md:flex md:flex-row" id="mobileMenu">
-          <li class="pr-5 no-underline hover:underline"><router-link  :to="'/coin/' + icon + '/tradedata'">Trade data</router-link></li>
-            <li class="pr-5 no-underline hover:underline"><router-link  :to="'/coin/' + icon + '/links'">Resources</router-link></li>
-            <li class="pr-5 no-underline hover:underline"><router-link  :to="'/coin/' + icon + '/reddit'">Reddit</router-link></li>
+          <li class="pr-5 no-underline hover:underline"><router-link :to="'/coin/' + icon + '/tradedata'">Trade data</router-link></li>
+            <li class="pr-5 no-underline hover:underline"><router-link :to="'/coin/' + icon + '/links'">Resources</router-link></li>
+            <li class="pr-5 no-underline hover:underline"><router-link :to="'/coin/' + icon + '/reddit'">Reddit</router-link></li>
             <li class="pr-5 no-underline hover:underline"><router-link :to="'/coin/'+ icon + '/twitter'">Twitter</router-link></li>
             <li class="pr-5 no-underline hover:underline"><router-link :to="'/coin/'+ icon + '/youtube'">Youtube</router-link></li>
         </ul>
@@ -16,7 +16,7 @@
 </div>
 
   <div>
-      <router-view/>
+      <router-view name="submenu"/>
     </div>
   
 </template>
