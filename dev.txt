@@ -1,4 +1,5 @@
 ## TODO
+Goal: show value of own cryptocoins + total value
 invoegen achter tableheader 'coin' <span v-if="(myCoins.length > 1)">s</span>
 initialiseren!?
 validatie: does RWE coin excist??
@@ -68,8 +69,12 @@ https://forum.vuejs.org/t/how-to-change-input-value-in-vfor/38134
 https://www.cryptocompare.com/coins/btc/overview/eur
 
 ## DATA
-API docs can be found here: https://api.nomics.com/
 Nomics API key: 16186f60d9df82897d708d0b4a6b3d0b
+API docs can be found here: https://api.nomics.com/
+
+
+Flipside API key: cc825c6a-f1d3-4477-8cff-f6556280fdfa
+API Docs: https://api-docs-v2.flipsidecrypto.com/
 
 Cache nomics data: https://medium.com/tokensoft/write-your-own-crypto-price-feed-api-in-10-minutes-with-nomics-and-graphql-a4cb29e76fdf
 
@@ -107,11 +112,9 @@ https://www.investopedia.com/articles/active-trading/042114/overbought-or-overso
 GIT
 git remote add origin remote repository https://github.com/dizid/crypto.tnxz.git
 
-Google Search 
-Past 45 seconds: http://www.google.com/#&q=kanye+west&tbs=qdr:s45&tbo=1
-Past 5 minutes http://www.google.com/#&q=kanye+west&tbs=qdr:n5&tbo=1
-Past 2 hours http://www.google.com/#&q=kanye+west&tbs=qdr:h2&tbo=1
 
+
+Nomics output from API call: 
 
 [
     {
@@ -188,28 +191,3 @@ Past 2 hours http://www.google.com/#&q=kanye+west&tbs=qdr:h2&tbo=1
 
 Localstorage: It’s not secure. Don’t store any private or personal information in localStorage.
 
-
-https://stackoverflow.com/questions/4689856/how-to-change-value-of-object-which-is-inside-an-array-using-javascript-or-jquer
-//Initailize array of objects.
-let myArray = [
-  {id: 0, name: "Jhon"},
-  {id: 1, name: "Sara"},
-  {id: 2, name: "Domnic"},
-  {id: 3, name: "Bravo"}
-],
-    
-//Find index of specific object using findIndex method.    
-objIndex = myArray.findIndex((obj => obj.id == 1));
-
-//Log object to Console.
-console.log("Before update: ", myArray[objIndex])
-
-//Update object's name property.
-myArray[objIndex].name = "Laila"
-
-//Log object to console again.
-console.log("After update: ", myArray[objIndex])
-
-String : coins.ETH.USD.PRICE.replace("ETH", myCoin.coin.toUpperCase()).substring(2) * myCoin.amount
-
-string

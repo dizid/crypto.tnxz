@@ -37,15 +37,17 @@
 export default {
   name: 'Home',
   data: () => ({
-    coinData: [null],
-	errors: [null],
+    coinData: [],
+	errors: [],
 	loading: true
   }),
  created () {
-	  fetch('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC,DOT,ETH,ENJ,EOS,XRP,CRO,BNB&tsyms=USD,EUR')
+	  fetch('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC,DOT,ETH,ENJ,EOS,ANKR,CRO,BNB&tsyms=USD,EUR')
         .then(response => response.json())
     	.then(data => (this.coinData = data.DISPLAY))
 		.catch(e => {this.errors.push(e)})
   }
 }
 </script>
+
+

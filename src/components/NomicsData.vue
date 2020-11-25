@@ -1,16 +1,17 @@
 <template>
    <div class="container mx-auto bg-gray-700 p-3 text-orange-500 md:font-bold">
- 
-prop: icon: {{icon}}
+ Nomics data comes here..<br>
+prop: icon: {{icon}}<br>
 </div>
 <div v-if="loading">
     ...loading data...
 </div>
+
 <div v-else class="container mx-auto bg-gray-700 p-3 text-orange-500 md:font-bold">
     <ul>
  <li> Coin: {{cryptocoins[0].name}}</li>
  <li> Price: &euro; {{cryptocoins[0].price}}</li>
- <li> Logo: <img :src="cryptocoins[0].logo_url"/></li>
+ <!-- <li> Logo: <img :src="cryptocoins[0].logo_url"/></li> -->
  
     </ul>  
 </div>

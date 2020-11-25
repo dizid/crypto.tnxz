@@ -4,7 +4,8 @@ import News from '@/views/News'
 import Search from '@/views/Search'
 import PortfolioManagement from '@/views/PortfolioManagement'
 import Portfolio from '@/views/Portfolio'
-/* import TradeData from '@/views/TradeData' */
+import TradeData from '@/views/TradeData'
+import Flipside from '@/components/Flipside'
 import About from '@/views/About'
 import Coin from '@/views/Coin'
 import Links from '@/components/Links'
@@ -22,13 +23,14 @@ const router = createRouter({
     { path: '/test', name: 'test', component: test},
     { path: '/news', name: 'News', component: News},
     { path: '/search', name: 'Search', component: Search},
+    { path: '/flipside', name: 'Flipside', component: Flipside},
     { path: '/portfolio', name: 'PortfolioManagement', component: PortfolioManagement},
     { path: '/viewportfolio', name: 'Portfolio', component: Portfolio},
     { path: '/about', name: 'About', component: About},
     {path: "/coin/:icon",name: "coin",component: Coin,
     props: true,
     children: [
-      /* { path: 'tradedata', name: 'tradedata', props: true, component: TradeData}, */
+      { path: 'tradedata', name: 'tradedata', props: true, component: TradeData},
       { path: 'links', name: 'links', props: true, component: Links},
       { path: 'reddit', name: 'reddit', props: true, component: Reddit},
       { path: 'twitter', name: 'twitter', props: true, component: Twitter},

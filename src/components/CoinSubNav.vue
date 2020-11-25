@@ -14,11 +14,9 @@
         </ul>
     </nav>
 </div>
-
-  <div>
-      <router-view name="submenu"/>
-    </div>
-  
+<div>
+<router-view></router-view>
+</div>
 </template>
 <script>
 export default {

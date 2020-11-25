@@ -1,12 +1,13 @@
 <template>
 <div>
-      <!--  <flipside v-bind:icon=icon /> -->
-     <getNomicData v-bind:icon=icon />
+       <flipside v-bind:icon=icon /> 
+     <!--  <getNomicData v-bind:icon=icon /> -->
+   
 </div>
 </template>
 <script>
 import getNomicData from "@/components/NomicsData"
-/* import flipside from "@/components/Flipside" */
+ import flipside from "@/components/Flipside" 
 export default {
      props: {
     icon: {
@@ -14,6 +15,6 @@ export default {
       required: true
     }
   },
-components: {getNomicData, /* flipside */}
+components: {getNomicData,  flipside }
 }
 </script>
