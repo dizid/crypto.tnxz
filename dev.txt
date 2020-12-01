@@ -1,4 +1,7 @@
 ## TODO
+Coins on the Home page: also based on localstorage!
+Flipside: FCAS just for "current coin" with link to full list of all FCAS data
+Submenu logo: current coin logo
 Goal: show value of own cryptocoins + total value
 invoegen achter tableheader 'coin' <span v-if="(myCoins.length > 1)">s</span>
 initialiseren!?

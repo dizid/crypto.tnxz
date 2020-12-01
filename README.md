@@ -2,6 +2,11 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a332b62a-1f1d-4ec4-bf4f-bfb824607582/deploy-status)](https://app.netlify.com/sites/youthful-mestorf-4fa68e/deploys)
 
+## Goal
+
+This app should show your crypto portfolio oversight, stored in localstorage without login (unsecure, i know)
+Also info about coins, news and metrics.
+
 ## Project setup
 
 ```

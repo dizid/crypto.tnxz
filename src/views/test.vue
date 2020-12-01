@@ -1,5 +1,5 @@
 <template>
-<!-- coindata {{coinData}}<br> WORK - mostly
+<!-- coindata {{coinData}}<br> WORKS - mostly
 coinData.BTC.USD {{coinData.BTC.USD}}<br>   -->
  Method showMyCoins: {{showMyCoins()}} <br> 
 <!-- Method showCoinData: {{showCoinData()}} <br>  coinData is Undefined  -->
@@ -13,18 +13,19 @@ let coinData = ref(0)
  let  myCoins = ref(0)
    return { coinData, myCoins };
 },
-methods: { // START METHODS
-  async showMyCoins ()  {  // START FUNCTION
+
+// Doel hier is de  prijs van iedere coin in localStorage opzoeken in de fetch data van crypto compare
+// OOK hier dus voornamelijk undefined-achtige errors :(
+
+methods: { 
+  async showMyCoins ()  {  
  // let  Amount = this.myCoins
    let Price = this.coinData
 const priceArray = this.myCoins.map(element => element.coin);
 
 console.log(await(priceArray)); // 
-
- 
-
-        } // END FUNCTION
-  }, // END methods
+        } 
+  }, 
  
 async created() {
    await  fetch("https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH&tsyms=USD,EUR")

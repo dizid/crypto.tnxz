@@ -1,6 +1,6 @@
 <template>
 <div>
-<coinsubnav :icon=icon />  
+<coinsubnav :icon=icon />
 </div>
 </template>
 <script>
